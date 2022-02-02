@@ -1,38 +1,242 @@
+* {
+  transition: all 0.2s;
+  background-color: #0a0b0c;
+  color: white;
+}
 .App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.App > .MuiSvgIcon-root {
+  position: absolute;
+  font-size: xx-large;
+  cursor: pointer;
+  right: 1%;
+  top: 1%;
+  width: 52px;
+  height: 52px;
+  border-radius: 40px;
+  opacity: 0.5;
+  background-color: thistle;
+  padding: 10px;
+}
+.App > .MuiSvgIcon-root:hover {
+  opacity: 1;
+}
+.create {
+  font-stretch: ultra-expanded;
+}
+.login {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  background-color: #0a0b0c;
+  color: white;
+  height: 800px;
+  justify-content: center;
+  align-items: center;
+}
+.key {
+  color: yellow !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login_container {
+  display: flex;
+  flex-direction: column;
+  width: 400px !important;
+  height: 850px !important;
+  padding: 30px;
+  row-gap: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.level {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.violet_text {
+  color: #8d56ba;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.beginner {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+.email_button {
+  background-color: rgb(32, 31, 31) !important;
+  border: 1px solid rgb(123, 122, 122);
+  border-radius: 10px;
+  font-weight: 700;
+  height: 70px;
+}
+.email_button:hover {
+  background-color: rgb(246, 237, 237) !important;
+  color: #0a0b0c;
+}
+.advanced {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+.connect_button {
+  border: none;
+  background-color: #0758d3;
+  border-radius: 10px;
+  font-weight: 700;
+  height: 70px;
+}
+.connect_button:hover {
+  background-color: #227aff !important;
+  color: rgb(255, 255, 255);
+}
+.metamask_logo {
+  width: 22px;
+  flex: 0.2;
+  border-radius: 40px;
+  margin: 10px;
+  background-color: #dc7735;
+}
+.trustwallet_logo {
+  flex: 0.2;
+  width: 10px;
+  height: 40px;
+  contain: fit-content;
+  border-radius: 50px;
+  margin: 10px;
+  background-color: #ffffff;
+}
+.coinbase_logo {
+  flex: 0.2;
+  width: 20px;
+  border-radius: 40px;
+  margin: 10px;
+  background-color: #044ff6;
+}
+.metamask {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: none;
+  background-color: #dc7735;
+  border-radius: 10px;
+  font-weight: 700;
+  height: 70px;
+  cursor: pointer;
+  padding: 20px;
+}
+.metamask_text {
+  background-color: #dc7735;
+  color: white;
+  flex: 0.6;
+}
+.trust_wallet {
+  display: flex;
+  justify-content: left;
+  cursor: pointer;
+  align-items: center;
+  border: none;
+  padding: 20px;
+  background-color: #ffffff !important;
+  border-radius: 10px;
+  font-weight: 700;
+  height: 70px;
+  cursor: pointer;
+}
+.trustwallet_text {
+  background-color: #ffffff !important;
+  color: black;
+  flex: 0.6;
+}
+.coinbase_wallet {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: none;
+  padding: 20px;
+  background-color: #044ff6 !important;
+  border-radius: 10px;
+  font-weight: 700;
+  height: 70px;
+  cursor: pointer;
+}
+.coinbasewallet_text {
+  background-color: #044ff6 !important;
+  flex: 0.6;
+}
+.email_container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.add_email_line1 {
+  text-align: left;
+  width: 100%;
+  font-weight: 600;
+  color: whitesmoke;
+}
+.add_email_line2 {
+  text-align: left;
+  width: 100%;
+  font-weight: lighter;
+  color: whitesmoke;
+  font-size: smaller;
+}
+.email_box {
+  background-color: rgb(44, 44, 44);
+  outline: none;
+  border: none;
+  width: 95%;
+  height: 50px;
+  border-radius: 6px;
+  margin-top: 20px;
+  padding: 5px 15px 2px 15px;
+}
+.continue {
+  display: flex;
+  font-weight: bold;
+  font-size: large;
+  background-color: #1548b8;
+  border: none;
+  border-radius: 10px;
+  height: 70px;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.policy {
+  font-size: normal;
+  font-weight: lighter;
+  color: rgb(116, 115, 115);
+  margin-bottom: 30px;
+}
+.policy > span {
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(142, 141, 141);
+}
+.have {
+  font-weight: bold;
+  font-size: large;
+}
+.Login {
+  color: #8255a7;
+  font-weight: bold;
+  font-size: large;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.back {
+  display: flex;
+  background-color: #0a0b0c;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 80vw;
 }
